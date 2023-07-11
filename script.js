@@ -9,28 +9,36 @@ let turn = "X"
 //for a background music 
 music.play();
 
-function bg() {
-    var b = document.getElementById('audio');
+function bgpause() {
+    var b = document.getElementById('ps');
     b.addEventListener('click', (e) => {
         if (e) music.pause();
+        // if(e) music.play();
+     
+     })   
 
+    }
+bgpause();
+
+function bgplay(){
+    var b=document.getElementById('pl');
+    b.addEventListener('click',(e)=>{
+    if(e) music.play();
     })
 }
-bg();
-
-
+bgplay();
 
 //Function to change the turn
 const changeTurn = () => {
-    return turn === 'X' ? '0' : 'X'
+    return turn === 'X' ? 'O' : 'X'
 }
 
 
 // a function to add img to the page
 let ig = () => {
     const x = document.createElement('IMG')
-    x.setAttribute("src", "winner.gif");
-       x.setAttribute('height',"150px");
+    x.setAttribute("src", "giphy.gif");
+       x.setAttribute('height',"200vw");
     document.getElementById('img').append(x);
 }
 

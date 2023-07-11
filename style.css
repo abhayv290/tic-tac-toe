@@ -6,13 +6,19 @@
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header{
-    background-color: black;
+    background-color: rgb(229, 226, 226);
+    position:sticky;
+    top: 0;
+    border-bottom: 2px solid grey;
    
 }
 
 header ul li{
     
-color: white;
+color: rgb(28, 2, 65); 
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: bolder;
+
     
 list-style: none;
     
@@ -22,19 +28,35 @@ padding: 10px;
 }
     
 #audio{
-    background: radial-gradient(green,transparent);
+    
     font-size: 2vw;
     position: relative;
+    display: inline-block;
+}
+#audio #dropdown{
+   display: none;
+   position:absolute;
+   top: 7px;
+   left: 4vw;
+   margin-right: 5vh;
+   height: auto;
+   width: 5vw;
+   z-index: 10;
+   border-radius: 10px;
+   border: 2px solid grey
+ 
+}
+#audio:hover #dropdown{
+    display: block;
+}
+#dropdown ul{
+    display: inline-flex;
+}
     
    
    
-}
 
-#main{
-    background: radial-gradient(blue, transparent);
-    font-size: larger;
-    font-family: fantasy;
-}
+
 .gamecontainer{
    
     display: flex;
@@ -112,3 +134,57 @@ footer{
 }
    
     
+
+@media  screen and (max-width:820px) {
+   .gamecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   } 
+   .gameInfo{
+    margin: 20vh 1vw;
+    font-size: 4vw;
+   }
+   .container {
+    display: grid;
+    grid-template-rows: repeat(3,20vw);
+    grid-template-columns: repeat(3,23vw);
+    font-size: 15vw;
+    color: #08571b;
+   }
+   #reset{
+    background-color: green; 
+    height: 10vw;
+    width: 21vw;
+    font-size: 2vw;
+    /* font-family: cursive; */
+    border-radius: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 7vw;
+   }
+   img{
+      align-self: center;
+      margin:10vh 10vw;
+        height:20vh;
+   }
+   #audio #dropdown {
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 6vw;
+    margin-right: 5vh;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid grey;
+    height: 6vw;
+    width: 17vw;
+}
+#dropdown ul{
+    display: inline-flex;
+    font-size: 4vw;
+    margin-left: 2vw;
+}
+}
+   
